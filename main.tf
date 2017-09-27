@@ -80,6 +80,8 @@ resource "aws_codebuild_project" "default" {
   artifacts {
     location       = "${aws_s3_bucket.codebuild_artifacts.bucket}"
     namespace_type = "BUILD_ID"
+    namespace_type = "NONE"
+    packaging      = "NONE"
     type           = "S3"
   }
 
